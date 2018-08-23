@@ -35,7 +35,7 @@ WAN: 1x10/100/1000
 
 - 12.运行桌面putty.exe程序，“Host Name”输入路由器地址192.168.31.1，“Port”输入22，点击下方“Open”。若提示输入用户名则输入步骤6页面中的用户名root和密码，否则重复步骤11。
 
-- 13.SSH成功登陆后，执行下列命令：
+- 13.SSH成功登陆后，执行下列命令：  
     cd /extdisks/sda1  
     mtd write lede-ramips-mt7621-mir3g-squashfs-kernel1.bin kernel1  
     mtd write lede-ramips-mt7621-mir3g-squashfs-rootfs0.bin rootfs0  
@@ -52,7 +52,7 @@ WAN: 1x10/100/1000
 ### 情况一：路由器运行OpenWrt正常
 - 1.下载官方开发板ROM（miwifi_r3g_firmware_c2175_2.25.122.bin）保存至格式化FAT或FAT32的U盘，并重命名为miwifi.bin
 
-- 2.U盘插入路由器USB，SSH登陆192.168.1.1执行命令：
+- 2.U盘插入路由器USB，SSH登陆192.168.1.1执行命令：  
   fw_setenv flag_try_sys2_failed 1  
   reboot  
   
