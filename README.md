@@ -36,12 +36,12 @@ WAN: 1x10/100/1000
 - 12.运行桌面putty.exe程序，“Host Name”输入路由器地址192.168.31.1，“Port”输入22，点击下方“Open”。若提示输入用户名则输入步骤6页面中的用户名root和密码，否则重复步骤11。
 
 - 13.SSH成功登陆后，执行下列命令：
-    cd /extdisks/sda1
-    mtd write lede-ramips-mt7621-mir3g-squashfs-kernel1.bin kernel1
-    mtd write lede-ramips-mt7621-mir3g-squashfs-rootfs0.bin rootfs0
-    nvram set flag_try_sys1_failed=1
-    nvram commit
-    reboot
+    cd /extdisks/sda1  
+    mtd write lede-ramips-mt7621-mir3g-squashfs-kernel1.bin kernel1  
+    mtd write lede-ramips-mt7621-mir3g-squashfs-rootfs0.bin rootfs0  
+    nvram set flag_try_sys1_failed=1  
+    nvram commit  
+    reboot  
 
 - 14.路由器重启至前面板LED灯蓝色常量，网线连接电脑和路由器LAN口，浏览器输入192.168.1.1，显示登陆界面表示小米路由器3G刷写OpenWrt成功，你可以为所欲为了 ~ ^o^
 
@@ -53,8 +53,8 @@ WAN: 1x10/100/1000
 - 1.下载官方开发板ROM（miwifi_r3g_firmware_c2175_2.25.122.bin）保存至格式化FAT或FAT32的U盘，并重命名为miwifi.bin
 
 - 2.U盘插入路由器USB，SSH登陆192.168.1.1执行命令：
-  fw_setenv flag_try_sys2_failed 1
-  reboot
+  fw_setenv flag_try_sys2_failed 1  
+  reboot  
   
 - 3.LED变为红色闪烁，按下reset，保持1~2秒，LED变为LED显示黄色（5分钟左右不能断电重启）。
 
